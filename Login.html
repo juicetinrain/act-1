@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to </title>
+    <link rel="stylesheet" href="login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="border">
+        <h1>Login</h1>
+        <div class="input">
+            <input type="text" placeholder="Username" required>
+            <i class='bx bx-user-circle'></i>
+        </div>
+        <div class="input">
+            <input type="password" placeholder="Password" id="password" required>
+            <i class='bx bx-lock' id="LockIcon"></i>
+        </div>
+        
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me.</label>
+            <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register"><p>Don't have an account? <a href="Registration.html">Register here.</a></p></div>
+    </div>
+
+    <script>
+        let LockIcon = document.getElementById("LockIcon");
+        let password = document.getElementById("password");
+
+        LockIcon.onclick = function(){
+            if(password.type == "password"){
+                password.type = "text";
+                LockIcon.className = "bx bx-lock-open"
+            }else{
+                password.type = "password";
+                LockIcon.className = "bx bx-lock"
+            }
+        }
+    </script>
+</body>
+</html>
